@@ -1,1 +1,176 @@
+Dictionary in Python
+Q1. Student Database
 
+Aim:
+To create a menu-driven Student Database using nested dictionaries.
+The program allows adding, updating, deleting and displaying student records.
+It also generates reports such as average marks, topper, subject-wise highest scorers and grade-wise grouping.
+
+Sample Input:
+101: Asha, {Math: 88, Physics: 76, Chem: 92}
+102: Ravi, {Math: 35, Physics: 58, Chem: 64}
+103: Meena, {Math: 72, Physics: 81, Chem: 69}
+
+Sample Output:
+Averages:
+101 -> 85.33
+102 -> 52.33
+103 -> 74.00
+
+Topper: Asha
+
+Highest per subject:
+Math -> Asha (88)
+Physics -> Meena (81)
+Chem -> Asha (92)
+
+Below 40 in any subject:
+Ravi (Math 35)
+
+Adding roll no. 101 again:
+Rejected as duplicate.
+
+Marks of 105:
+Rejected as out of range
+
+Q2. Employee Database (Grouping and Aggregation)
+
+Aim:
+To create an Employee Database using dictionaries to store employee ID, name, department and salary.
+The program performs operations such as adding, updating, deleting and searching employees, along with department-wise payroll and salary reports.
+
+Sample Input:
+E1: Kiran, IT, 60000
+E2: Sara, HR, 45000
+E3: Dev, IT, 75000
+E4: Nina, Finance, 52000
+E5: Omar, HR, 48000
+
+Sample Output:
+Department-wise Payroll:
+IT = 135000
+HR = 93000
+Finance = 52000
+
+Highest Paid Employee:
+IT -> Dev
+HR -> Omar
+Finance -> Nina
+
+After 10% Raise:
+Sara = 49500
+Omar = 52800
+
+Original Salaries:
+Sara = 45000
+Omar = 48000
+
+Department with Highest Average Salary:
+IT = 67500
+
+Deleting E9:
+Employee not found.
+
+Q3. Library Record System (State and Rules)
+
+Aim:
+To develop a Library Record System using dictionaries to maintain book details, available copies and issued member IDs.
+The program performs book issuing, returning and searching while applying rules such as maximum two books per member and checking book availability.
+
+Sample Input:
+B1: Python Basics, Rao, 2 copies
+B2: Data Structures, Iyer, 1 copy
+B3: Algorithms, Rao, 1 copy
+
+Sample Output:
+Issue B1 to M1:
+Success, copies = 1
+
+Issue B1 to M2:
+Success, copies = 0
+
+Issue B1 to M3:
+Rejected, no copies left.
+
+Issue B1 to M1 again:
+Rejected, already holds it.
+
+Return B1 by M9:
+Rejected, M9 does not hold it.
+
+Return B1 by M1:
+Success, copies = 1
+
+Issue B2 to M2:
+Success.
+
+Issue B3 to M2:
+Rejected, member has reached the 2-book limit.
+
+Q4. Word Frequency Counter (Dictionary as a Counter)
+
+Aim:
+To develop a Word Frequency Counter using dictionaries to count the occurrences of words in a paragraph. 
+The program cleans text, removes punctuation, displays the top N frequent words and groups words according to their frequency and length.
+
+Sample Input 1:
+Enter paragraph:
+the cat and the hat and the bat
+
+Enter N:
+3
+
+Sample Output 1:
+Word Counts:
+the = 3
+and = 2
+bat = 1
+cat = 1
+hat = 1
+
+Top 3:
+the (3)
+and (2)
+bat (1)
+
+Inverted Dictionary:
+{3: ['the'], 2: ['and'], 1: ['bat', 'cat', 'hat']}
+
+Words Appearing Once:
+bat, cat, hat
+
+Sample Input 2:
+Hello, hello! HELLO world.
+
+Sample Output 2:
+hello = 3
+world = 1
+
+Sample Input 3:
+Empty string
+
+Sample Output 3:
+No words were entered. Nothing to count.
+
+Q5. Phone Directory (List Values and Reverse Lookup)
+
+Aim:
+To create a Phone Directory using dictionaries and lists to store contact names, phone numbers, email addresses and cities.
+The program supports adding, updating, deleting and searching contacts, along with reverse phone lookup and city-wise grouping.
+
+Sample Input:
+Anita: [9876543210], anita@mail.com, Pune
+Manoj: [9123456780, 9988776655],
+       manoj@mail.com, Delhi
+Zara: [9000011111], zara@mail.com, Pune
+
+Sample Output:
+Search "an":
+Anita
+Manoj
+
+Reverse Lookup 9988776655:
+Manoj
+
+Contacts Grouped
+                            -------------------------------------
