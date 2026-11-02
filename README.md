@@ -1,189 +1,42 @@
 # IC-2K24-86-Pythonlab-SHIFA
-LAB 1
-## 1. Variable and Identifier Practice
 
-### Aim
-To take the user's name, age, height, and student status as input and display each value along with its data type.
+# Python Lab Repository
 
-### Logic
-The program takes four values from the user using the input() function.
-The values are converted into appropriate data types, and the type() function is used to display their data types.
+Welcome to my Python Lab Repository! This repository contains Python programs, practical assignments, coding exercises and solutions completed as part of my Python lab work.
 
-### Sample Input / Output
+## Aim
 
-Input:
-Enter your name: Shifa
-Enter your age: 20
-Enter your height: 5.4
-Are you a student? (True/False): True
+The aim of this repository is to learn and practice Python programming concepts through practical implementation. It focuses on developing logical thinking, problem-solving skills and understanding Python fundamentals by writing and executing different programs.
 
-Output:
-Name: Shifa Type: <class 'str'>
-Age: 20 Type: <class 'int'>
-Height: 5.4 Type: <class 'float'>
-Student: True Type: <class 'bool'>
+## 📚 Topics Covered
 
----
+The repository includes practical implementations of the following Python concepts:
 
-## 2. Greeting Program
+- Python Basics and Variables
+- Data Types and Operators
+- Conditional Statements (if, elif, else)
+- Loops (for and while)
+- Strings and String Manipulation
+- Lists, Tuples and Sets
+- Dictionaries and Nested Dictionaries
+- Functions and Recursion
+- Modules
+- File Handling
+- Exception Handling
+- Dictionary Comprehensions
+- Searching and Sorting
+- Basic Problem Solving and Logic Building
 
-### Aim
-To take the user's name, age, and city as input and display them together in a single sentence.
-
-### Logic
-The program accepts the user's name, age, and city as input.
-An f-string is used to combine all three values into one meaningful sentence.
-
-### Sample Input / Output
-
-Input:
-Enter your name: Shifa
-Enter your age: 20
-Enter your city: Indore
-
-Output:
-My name is Shifa, I am 20 years old and I live in Indore.
-
----
-
-## 3. Arithmetic Operations
-
-### Aim
-To take two numbers from the user and perform basic arithmetic operations on them.
-
-### Logic
-The program takes two numbers as input from the user.
-It calculates and displays their sum, difference, product, quotient, and remainder using arithmetic operators.
-
-### Sample Input / Output
-
-Input:
-Enter first number: 20
-Enter second number: 6
-
-Output:
-Sum: 26.0
-Difference: 14.0
-Product: 120.0
-Quotient: 3.3333333333333335
-Remainder: 2.0
-
----
-
-## 4. Celsius to Fahrenheit
-
-### Aim
-To take temperature in Celsius from the user and convert it into Fahrenheit.
-
-### Logic
-The program takes the Celsius temperature as input.
-It applies the formula F = (C × 9/5) + 32 and displays the Fahrenheit value.
-
-### Sample Input / Output
-
-Input:
-Enter temperature in Celsius: 25
-
-Output:
-Temperature in Fahrenheit: 77.0
-
----
-
-## 5. String Manipulation
-
-### Aim
-To take a full name from the user and perform different string operations on it.
-
-### Logic
-The program takes a full name as input.
-It converts the name into uppercase and lowercase, reverses the string, and calculates its length using string operations.
-
-### Sample Input / Output
-
-Input:
-Enter your full name: Shifa Sheikh
-
-Output:
-Uppercase: SHIFA SHEIKH
-Lowercase: shifa sheikh
-Reversed: hkiehS afihS
-Length: 12
-
----
-
-## 6. Escape Sequence Practice
-
-### Aim
-To take item names and prices from the user and display them as a neatly formatted receipt.
-
-### Logic
-The program takes three item names and their prices as input.
-It uses \n for new lines and \t for tab spacing to format the receipt and calculates the total price.
-
-### Sample Input / Output
-
-Input:
-Enter first item: Pen
-Enter price of first item: 20
-Enter second item: Notebook
-Enter price of second item: 50
-Enter third item: Pencil
-Enter price of third item: 10
-
-Output:
-RECEIPT
--------------------------
-Item            Price
--------------------------
-Pen             ₹20.0
-Notebook        ₹50.0
-Pencil          ₹10.0
--------------------------
-Total           ₹80.0
-
----
-
-## Optional Program: Menu-Driven Calculator
-
-### Aim
-To create a simple calculator that performs different arithmetic operations based on the user's choice.
-
-### Logic
-The program displays a menu containing addition, subtraction, multiplication, division, and exit options.
-It repeatedly takes the user's choice and numbers as input until the user selects the exit option.
-
-### Sample Input / Output
-
-Input:
-1. Addition
-2. Subtraction
-3. Multiplication
-4. Division
-5. Exit
-
-Enter your choice: 1
-Enter first number: 10
-Enter second number: 5
-
-Output:
-Result: 15.0
-
-When the user selects option 5:
-
-Calculator closed.
-
----
+## Repository structure:
+*Each lab folder contains its respective Python programs and assignment solutions.*
 
 ## Technologies Used
 
-- Python
-- Variables and Data Types
-- User Input
-- Arithmetic Operators
-- String Methods
-- Escape Sequences
-- Conditional Statements
-- While Loop
-- f-strings
+- **Programming Language:** Python
+- **Code Editor:** Sublime Text
+- **Version Control:** Git
+- **Repository Hosting:** GitHub
 
----
+**Shifa Sheikh**
+**IC-2K24-86**
+
