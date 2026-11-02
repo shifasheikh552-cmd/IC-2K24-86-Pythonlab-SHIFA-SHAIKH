@@ -1,15 +1,8 @@
-# Python Programming: Advanced Question Paper (ANSWER KEY)
+# Python Programming: Advanced Question Paper 
 
-Reference: [learnxinyminutes.com/python](https://learnxinyminutes.com/python) | Total Marks: 50 | Python 3.10+
+# SECTION A: Technical Questions 
 
-All code answers are verified by running [`solutions.py`](solutions.py).
-The mark splits shown are a suggested distribution that sums to the marks given for each question.
-
----
-
-# SECTION A: Technical Questions (40 Marks)
-
-## Q1. Boolean-to-integer coercion [4]
+## Q1. Boolean-to-integer coercion
 
 **Output**
 ```
@@ -32,11 +25,9 @@ False
 
 **Explanation:** `bool` is a **subclass of `int`**, with `True == 1` and `False == 0`. In arithmetic and comparison, the boolean is used as the integer 1 or 0. `2 == True` is False because 2 is not equal to 1, even though `bool(2)` is True. Equality compares values, not truthiness.
 
-*Marks: outputs 2.5 (0.5 each), explanation 1.5.*
 
----
 
-## Q2. `is` vs `==` [4]
+## Q2. `is` vs `==` 
 
 **Output**
 ```
@@ -59,11 +50,8 @@ True
 
 After reassignment the two lists hold equal contents (so `==` is True) but are **two distinct objects** (so `is` is False).
 
-*Marks: outputs 2, difference 1, explanation 1.*
 
----
-
-## Q3. Floor division and modulo [4]
+## Q3. Floor division and modulo 
 
 **Output**
 ```
@@ -88,11 +76,9 @@ After reassignment the two lists hold equal contents (so `==` is True) but are *
 
 **Rule:** in Python the result of `%` has the **same sign as the divisor** (and `0 <= r < b` when `b > 0`). In C the remainder has the sign of the dividend.
 
-*Marks: outputs 2.5, explanation of C vs Python 1, rule 0.5.*
-
 ---
 
-## Q4. Slicing [4]
+## Q4. Slicing 
 
 ```python
 li = [1, 2, 4, 3]
@@ -109,11 +95,9 @@ li[::-1]   # (e) [3, 4, 2, 1]
 
 **Negative step:** traversal goes **right to left**. The defaults for `start` and `end` swap (start at the last element, go to the first). `li[::-1]` reverses the list. With explicit bounds `start` must be greater than `end`, e.g. `li[3:0:-1]` gives `[3, 4, 2]`.
 
-*Marks: (a) to (e) 0.5 each = 2.5, syntax 1, negative step 0.5.*
-
 ---
 
-## Q5. Tuple and extended unpacking [4]
+## Q5. Tuple and extended unpacking 
 
 ```python
 a, b, c = (1, 2, 3)        # a=1, b=2, c=3
@@ -127,11 +111,9 @@ print(type((1,)))          # <class 'tuple'>
 - **Type of `b`:** `list` (`[2, 3]`). A starred target always collects into a **list**, even when the source is a tuple.
 - **`(1)` vs `(1,)`:** parentheses alone only group an expression, so `(1)` is the integer `1`. A tuple is created by the **comma**, so a one-element tuple must be written `(1,)`.
 
-*Marks: tuple unpacking 1, extended unpacking 1, type of `b` 1, `(1)` vs `(1,)` 1.*
-
 ---
 
-## Q6. Closure and `nonlocal` [4]
+## Q6. Closure and `nonlocal` 
 
 **Output**
 ```
@@ -154,8 +136,6 @@ print(type((1,)))          # <class 'tuple'>
 **Without `nonlocal`:** `total += n` is an assignment, so Python treats `total` and `count` as **local** to `avg`. The first call then reads `total` before it has a value, raising **`UnboundLocalError`**. `nonlocal` makes the assignment rebind the variables in the enclosing scope.
 
 **Closure vs regular nested function:** a **closure** is a nested function that **captures and remembers variables from its enclosing scope** even after the outer function has returned (here `total` and `count`, stored in `avg.__closure__`). A regular nested function does not use enclosing variables, so it carries no such state.
-
-*Marks: outputs 1.5, trace 0.5, without `nonlocal` 1, closure vs nested 1.*
 
 ---
 
@@ -183,12 +163,9 @@ Call 3, `all_the_args(*args, **kwargs)` is the same as `all_the_args(1, 2, 3, 4,
 (1, 2, 3, 4)
 {'a': 3, 'b': 4}
 ```
-
-*Marks: role 1, each call with its unpacking shown 1 (3 total).*
-
 ---
 
-## Q8. Set operations [4]
+## Q8. Set operations 
 
 ```python
 A = {1, 2, 3, 4}
@@ -205,11 +182,9 @@ B = {2, 3, 5}
 
 **`{[1,2,3]: 'abc'}` vs `{(1,2,3): 'abc'}`:** dictionary keys (and set elements) must be **hashable**, meaning they have a hash value that never changes. A **list is mutable**, so it is unhashable and raises `TypeError: unhashable type: 'list'`. A **tuple of immutable elements** is immutable and hashable, so it is a valid key.
 
-*Marks: five expressions with operation name and elements 2.5, hashability explanation 1.5.*
-
 ---
 
-## Q9. Decorator with `@wraps` [4]
+## Q9. Decorator with `@wraps` 
 
 **Calling `my_function(1, 2)`** prints:
 ```
@@ -241,11 +216,9 @@ def my_function(x, y):
 my_function = log_function(my_function)
 ```
 
-*Marks: (a) 1.5, (b) 1.5, (c) 1.*
-
 ---
 
-## Q10. Multiple inheritance (`Batman`) [4]
+## Q10. Multiple inheritance (`Batman`) 
 
 **(a) MRO** (computed by C3 linearization)
 ```
@@ -261,13 +234,11 @@ Python searches for the method along the MRO: `Batman` (no `say`), then `Superhe
 2. The two parents take **different arguments** (`name`, `movie`, `superpowers` for `Superhero`; `can_fly` for `Bat`), so one cooperative `super()` call cannot give each its own set.
 3. Calling `Bat.__init__(self, *args, can_fly=False, **kwargs)` explicitly makes sure `Bat` is initialized and that `self.fly` is set to `False`.
 
-*Marks: (a) 1, (b) 1.5, (c) 1.5.*
-
 ---
 
-# SECTION B: Theoretical Questions (10 Marks)
+# SECTION B: Theoretical Questions 
 
-## Q11. Generators in Python [5]
+## Q11. Generators in Python 
 
 **(a) What a generator is, and how it differs from a function returning a list [1]**
 A generator is a special **iterator** produced by a function containing `yield` (or by a generator expression). Calling it does not run the body; it returns a generator object that produces values **lazily**.
@@ -374,10 +345,3 @@ class Human:
 
 ---
 
-## Mark Summary
-
-| Section | Questions | Marks |
-|---|---|---|
-| A: Technical | Q1 to Q10 (4 each) | 40 |
-| B: Theoretical | Q11, Q12 (5 each) | 10 |
-| **Total** | | **50** |
