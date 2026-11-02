@@ -1,4 +1,4 @@
-"""Runnable checks for the Python question paper solutions."""
+
 from functools import wraps
 
 # Q1
