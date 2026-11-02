@@ -8,7 +8,7 @@ Welcome to my Python Lab Repository! This repository contains Python programs, p
 
 The aim of this repository is to learn and practice Python programming concepts through practical implementation. It focuses on developing logical thinking, problem-solving skills and understanding Python fundamentals by writing and executing different programs.
 
-## 📚 Topics Covered
+## Topics Covered
 
 The repository includes practical implementations of the following Python concepts:
 
